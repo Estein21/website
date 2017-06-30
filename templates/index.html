@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Yogilytics</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../static/css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../static/css/font-awesome/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="#">Yogilytics</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li>
+                        <a href="#report">Free Report</a>
+                    </li>
+                    <li>
+                        <a href="#analytics">Analytics</a>
+                    </li>
+                    <li>
+                        <a href="#insight">Insight</a>
+                    </li>
+                    <li>
+                        <a href="#how-it-works">How it Works</a>
+                    </li> -->
+                    <li>
+                        <a style="" href="http://dash.yogilytics.com">Dashboard</a>
+                        <!-- <button type="button" class="btn btn-outline-primary">Primary</button> -->
+
+                    </li>
+                    <!-- <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                      <li><a href="#">Login</a></li>
+                                      <li><a href="#">Register</a></li>
+                                    </ul>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="report"></a>
+    <div class="intro-header">
+        <div class="image-layer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="intro-message">
+                            <h1 style="padding-top:3%">Yogilytics</h1>
+                            <h3 style="letter-spacing: 2px;">How is your studio stacking up?</h3>
+                            <form style="padding:1%">
+                                <div class="form-group" style="width:27%;display: inline-block;">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter studio email">
+                                </div>
+                                <div class="form-group row">
+                                    <button type="submit" class="btn btn-primary">Get my Personalized Report</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+
+    <a name="analytics"></a>
+    <div class="content-section-b">
+
+        <div class="container">
+            <div class="row">
+              <div class="col-md-7">
+                  <hr class="section-heading-spacer">
+                  <div class="clearfix"></div>
+                  <h2 class="section-heading">What are you doing with your studio data?</h2>
+                  <p class="lead">Simple reports sent to your inbox. Curated by the top yoga studio directors in the industry.</p>
+              </div>
+                <div class="col-md-5">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    </section>
+    <!-- /.content-section-a -->
+
+    <!-- <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-12 col-lg-7" data-reactid="114">
+                    <section class="p-y-l" data-reactid="115">
+                        <h3 data-reactid="116">See Your Studio's Potential</h3>
+                        <p data-reactid="117">Around how many Yogis are in each class?</p>
+                        <form data-reactid="118">
+                            <div class="row gutter-small" data-e2e="earnings-calc" data-reactid="119">
+                                <div class="col-xs-12 col-md-4 m-b-s" data-reactid="120">
+                                  <input type="number" min="1" id="hours" name="hours" placeholder="Yogis" class="form-control p-a-s radius border-moonstone full" required="" data-reactid="121">
+                                </div>
+                                <div class="col-xs-12 col-md-4 p-l-0-md m-b-s" data-reactid="122">
+                                  <input type="text" id="estimate-city" name="city" placeholder="Number of classes" class="form-control p-a-s radius border-moonstone full" required="" autocomplete="off" data-reactid="123">
+                                </div>
+                                <div class="col-xs-12 col-md-4 p-l-0-md m-b-s" data-reactid="124">
+                                  <input type="submit" data-e2e="estimate-button" value="Calculate" class="btn btn-pink _18W5Bo text-uppercase full-width p-y-s" data-reactid="125">
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <div class="col-md-6">
+                </div>
+            </div>
+
+        </div>
+
+    </div> -->
+    <!-- /.content-section-b -->
+
+    <div class="content-section-b" style="background-color:#EDF7EF;text-align:center">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">What is Yogilytics?</h2>
+                    <p class="lead">Simple, action-oriented reports for your yoga studio, delivered whenever</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+    <a name="insight"></a>
+
+    <div class="content-section-a" style="text-align:center">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Answer questions like...</h2>
+                    <div class="col-md-3" style="padding:20px 30px;">
+                        <img class="icon" width="50%" src="../static/img/icons/locate.svg"><br>
+                        <strong class="title">Which classes are most & least popular?</strong><br>
+                        <span class="sub-title">Locate the top performing and lowest performing yoga classes.</span>
+                    </div>
+                    <div class="col-md-3" style="padding:20px 30px;">
+                      <img class="icon" width="50%" src="../static/img/icons/dropoff.svg"><br>
+                        <strong class="title">Why are yogis dropping off?</strong><br>
+                        <span class="sub-title">Learn why some of the top yogis stop coming.</span>
+                    </div>
+                    <div class="col-md-3" style="padding:20px 30px;">
+                      <img class="icon" width="50%" src="../static/img/icons/balance.svg"><br>
+                        <strong class="title">What are the best time slots?</strong><br>
+                        <span class="sub-title">Discover what the most popular times are for classes.</span>
+                    </div>
+                    <div class="col-md-3" style="padding:20px 30px;">
+                      <img class="icon" width="50%" src="../static/img/icons/network.svg"><br>
+                        <strong class="title">Who are your top instructors?</strong><br>
+                        <span class="sub-title">Identify the top performing yoga instructors.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Then take action like...</h2>
+                    <div class="col-md-4" style="padding:20px 30px;">
+                      <img class="icon" width="50%" src="../static/img/icons/campaign.svg"><br>
+                        <strong class="title">Run promotional campaigns</strong><br>
+                        <span class="sub-title">Create hyper-targeted customized campaigns for your ideal yogi.</span>
+                    </div>
+                    <div class="col-md-4" style="padding:20px 30px;">
+                      <img class="icon" width="50%" src="../static/img/icons/award.svg"><br>
+                        <strong class="title">Incentivize instructors</strong><br>
+                        <span class="sub-title">Reward your best instructors, after all they are your life blood.</span>
+                    </div>
+                    <div class="col-md-4" style="padding:20px 30px;">
+                      <img class="icon" width="50%" src="../static/img/icons/gift.svg"><br>
+                        <strong class="title">Reward your top Yogis</strong><br>
+                        <span class="sub-title">Reward your top Yogis with an automated reward structure. </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+
+    <a name="how-it-works"></a>
+
+    <div class="content-section-b">
+
+        <div class="container">
+            <div class="row">
+                <div class='col-md-offset-2 col-md-8 text-center'>
+                    <h2>How Yogilytics Works</h2>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md-offset-2 col-md-8'>
+                    <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                        <!-- Bottom Carousel Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#quote-carousel" data-slide-to="1"></li>
+                            <li data-target="#quote-carousel" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Carousel Slides / Quotes -->
+                        <div class="carousel-inner">
+
+                            <!-- Quote 1 -->
+                            <div class="item active">
+                                    <div class="row">
+                                        <div class="col-sm-3 text-center">
+                                            <!-- <img class="img-circle" src="http://www.reactiongifs.com/r/overbite.gif" style="width: 100px;height:100px;"> -->
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <p class="carousel-description">1. Upload exported CSVs or connect your scheduler app (with our developer's help)</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            <!-- Quote 2 -->
+                            <div class="item">
+                                    <div class="row">
+                                        <div class="col-sm-3 text-center">
+                                            <!-- <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg" style="width: 100px;height:100px;"> -->
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <p class="carousel-description">2. Analyze our pre-configured reports from your data, or customize your own.</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            <!-- Quote 3 -->
+                            <div class="item">
+                                    <div class="row">
+                                        <div class="col-sm-3 text-center">
+                                            <!-- <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/keizgoesboom/128.jpg" style="width: 100px;height:100px;"> -->
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <p class="carousel-description">3. Run hyper targeted promotional campaigns to create loyal Yogis.</p>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <!-- Carousel Buttons Next/Prev -->
+                        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+    <!-- <a name="partners">
+    <div class="content-section-b" style="background-color:#EDF7EF;text-align:center">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Partners</h2>
+                </div>
+                <div class="col-md-6">
+                  MindBody
+                </div>
+                <div class="col-md-6">
+                  YogaDistrict
+                </div>
+            </div>
+
+        </div>
+
+    </div> -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- <ul class="list-inline">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#services">Services</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul> -->
+                    <p class="copyright text-muted small">Copyright &copy; Yogilytics 2017. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/landing-page.js"></script>
+
+
+</body>
+
+</html>

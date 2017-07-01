@@ -26,11 +26,5 @@ class Mailer:
             pass
 
 
-    def sendEmail(self,email,studio):
-
-        toaddr = 'sarah.sharpe1994@gmail.com'
-        subject = "hi"
-        html =  """
-                Hey
-                """
-        self.send(toaddr,subject,html)
+    def sendEmail(self,toaddr,subj,html):
+        self.send(toaddr,subj,html)

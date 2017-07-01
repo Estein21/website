@@ -18,7 +18,7 @@ def demoSubmitForm():
     html = 'hi'
 
     email = Mailer()
-    email.sendEmail(email,subj,html))
+    email.sendEmail(email,subj,html)
 
     return render_template('index.html')
 

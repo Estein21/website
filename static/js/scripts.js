@@ -45,10 +45,6 @@ jQuery(document).ready(function() {
     	$('.testimonials-container').backstretch("resize");
     });
 
-    /*
-        Wow
-    */
-    new WOW().init();
 
     /*
 	    Modals
@@ -64,38 +60,7 @@ jQuery(document).ready(function() {
 	$('.c-form-1-box form input[type="text"], .c-form-1-box form textarea').on('focus', function() {
 		$('.c-form-1-box form input[type="text"], .c-form-1-box form textarea').removeClass('contact-error');
 	});
-	// $('.c-form-1-box form').submit(function(e) {
-	// 	e.preventDefault();
-	//     $('.c-form-1-box form input[type="text"], .c-form-1-box form textarea').removeClass('contact-error');
-	//     var postdata = $(this).serialize();
-	//     $.ajax({
-	//         type: 'POST',
-	//         url: '/demo-submit-form',
-	//         data: postdata,
-	//         dataType: 'json',
-	//         success: function(json) {
-	//         	if(json.nameMessage != '') {
-	//                 $('.c-form-1-box form .c-form-1-name').addClass('contact-error');
-	//             }
-	//             if(json.emailMessage != '') {
-	//                 $('.c-form-1-box form .c-form-1-email').addClass('contact-error');
-	//             }
-	//             if(json.subjectMessage != '') {
-	//                 $('.c-form-1-box form .c-form-1-subject').addClass('contact-error');
-	//             }
-	//             if(json.messageMessage != '') {
-	//                 $('.c-form-1-box form .c-form-1-message').addClass('contact-error');
-	//             }
-	//             if(json.nameMessage == '' && json.emailMessage == '' && json.subjectMessage == '' && json.messageMessage == '') {
-	//             	$('.c-form-1-box form').fadeOut('fast', function() {
-	//                     $('.c-form-1-bottom').append('<p>Thanks for contacting us! We will get back to you very soon.</p>');
-	//                     // reload background
-	//     				$('.top-content').backstretch("resize");
-	//                 });
-	//             }
-	//         }
-	//     });
-	// });
+
 
 });
 
@@ -107,4 +72,48 @@ jQuery(window).load(function() {
 	*/
 	$(".modal-body img, .testimonial-image img").attr("style", "width: auto !important; height: auto !important;");
 
+});
+
+$("form").submit(function(e) {
+	var form = this;
+	e.preventDefault();
+	var formData = $('form').serializeArray();
+	$('#loadingmessage').show();
+	$("#demo-submit-form-button").attr("disabled", true);
+	$.ajax({
+	    url: "/demo-submit-form",
+	    data: formData,
+	    type: 'POST',
+	    success: function(response) {
+	      if (response == 'username'){
+	        $('#error').text("Username already exists!")
+	      }
+	      else if (response == 'company') {
+	        $('#error').text("Company already exists!")
+	      }
+	      else if (response == 'email') {
+	        $('#error').text("Email already exists!")
+	      }
+	      else {
+	        $('#loadingmessage').show();  // show the loading message.
+	        $.ajax({
+	          url: '/demo-submit-form-validate',
+	            type: 'POST',
+	            data: formData,
+	            success: function(result) {
+	              $('#loadingmessage').hide();
+	              $('#error').text("")
+	              $('#success').text("Great! Check your email!");
+	              console.log(result);
+	            },
+	            error: function(result){
+	              console.log(result);
+	              $('#loadingmessage').hide();
+	              $('#error').text("There was an error with your submission!")
+								$("#demo-submit-form-button").attr("disabled", false);
+	            }
+	        });
+	      }
+	    }
+	});
 });

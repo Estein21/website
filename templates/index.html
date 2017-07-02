@@ -24,13 +24,27 @@
         <![endif]-->
 
     <!-- Favicon and touch icons -->
-    <!-- <link rel="shortcut icon" href="../static/ico/favicon.png">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../static/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="shortcut icon" href="../static/img/favicon.ico">
+        <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../static/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../static/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../static/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="../static/ico/apple-touch-icon-57-precomposed.png"> -->
 
 </head>
+
+<style>
+#error{
+  color:red;
+}
+#success{
+  color:green;
+}
+#loadingmessage{
+  width: 3em;
+  margin-left: 45%;
+  padding-bottom: 1em;
+}
+</style>
 
 <body>
 
@@ -83,7 +97,7 @@
                         </div>
                     </div>
                     <div class="c-form-1-bottom">
-                        <form role="form" action="/demo-submit-form" method="post" role="form">
+                        <form id="demo-submit-form" method="post" role="form">
                             <div class="form-group">
                                 <label class="sr-only" for="c-form-1-name">Name</label>
                                 <input type="text" name="name" placeholder="Full Name" class="c-form-1-name form-control" id="c-form-1-name" required>
@@ -96,7 +110,12 @@
                                 <label class="sr-only" for="c-form-1-subject">Studio Name</label>
                                 <input type="text" name="studio" placeholder="Studio Name" class="c-form-1-subject form-control" id="c-form-1-subject" required>
                             </div>
-                            <button type="submit" class="btn">Request a Demo</button>
+                            <span id="error"></span>
+                            <span id="success"></span>
+                            <div id='loadingmessage' style='display:none'>
+                              <img src='../static/img/loader.gif'/>
+                            </div>
+                            <button id="demo-submit-form-button" type="submit" class="btn">Request a Demo</button>
                         </form>
                     </div>
                 </div>

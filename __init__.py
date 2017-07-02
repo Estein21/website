@@ -1,8 +1,10 @@
 from flask import Flask, flash, render_template, request, jsonify, redirect, make_response, session, redirect, url_for
 from mailer import Mailer
+from pymongo import MongoClient, GEO2D
 
 app = Flask(__name__)
 
+db = MongoClient('52.15.58.213', 27017).test
 
 @app.route('/')
 def homePage():
@@ -15,6 +17,12 @@ def demoSubmitForm():
     email = request.form['email']
     studio = request.form['studio']
 
+    leads = {}
+    leads['name'] = name
+    leads['email'] = email
+    leads['studio'] = studio
+
+    db.leads.insert(leads)
 
     toaddr = email
     subj = 'Your Yoglytics Demo!'
@@ -37,7 +45,12 @@ def demoSubmitForm():
     mailerTwo = Mailer()
     mailerTwo.send(toaddrTwo,subjTwo,htmlTwo)
 
-    return redirect("/", code=302)
+    return ''
+
+@app.route('/demo-submit-form-validate', methods=['GET', 'POST'])
+def demoValidateSubmitForm():
+    return 'success'
+
 
 
 if __name__ == '__main__':

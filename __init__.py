@@ -1,10 +1,12 @@
 from flask import Flask, flash, render_template, request, jsonify, redirect, make_response, session, redirect, url_for
 from mailer import Mailer
 from pymongo import MongoClient, GEO2D
+from Utilities import Utilities
 
 app = Flask(__name__)
 
-db = MongoClient('52.15.58.213', 27017).test
+util = Utilities()
+db = util.dbConfig()
 
 @app.route('/')
 def homePage():
